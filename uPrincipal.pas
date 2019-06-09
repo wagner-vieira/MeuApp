@@ -36,6 +36,7 @@ type
     N3: TMenuItem;
     N4: TMenuItem;
     N5: TMenuItem;
+    Sibre1: TMenuItem;
     procedure Calculadora1Click(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure Calendrio1Click(Sender: TObject);
@@ -48,6 +49,7 @@ type
     procedure Produtos1Click(Sender: TObject);
     procedure Usurios1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure Sibre1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,7 +62,7 @@ var
 implementation
 
 uses
-  uCalendario, uTabuadas, uTriangulo, uCadastroClientes, uCadastroProdutos, uPedidos, uCadastroUsuarios;
+  uCalendario, uTabuadas, uTriangulo, uCadastroClientes, uCadastroProdutos, uPedidos, uCadastroUsuarios, uSobre;
 
 {$R *.dfm}
 
@@ -154,6 +156,15 @@ begin
     MessageDlg('Sua aplicação está sendo encerrada.', mtInformation, [mbOK],0);
     Close;
   end;
+end;
+
+procedure TFrmPrincipal.Sibre1Click(Sender: TObject);
+begin
+  if FrmSobre = nil then
+  begin
+    Application.CreateForm(TFrmSobre, FrmSobre);
+  end;
+  FrmSobre.Show;
 end;
 
 procedure TFrmPrincipal.Usurios1Click(Sender: TObject);

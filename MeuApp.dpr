@@ -9,7 +9,8 @@ uses
   uBancoDados in 'uBancoDados.pas' {conexao: TDataModule},
   uCadastroClientes in 'uCadastroClientes.pas' {FrmCadastroClientes},
   uCadastroProdutos in 'uCadastroProdutos.pas' {FrmCadastroProdutos},
-  uCadastroUsuarios in 'uCadastroUsuarios.pas' {FrmCadastroUsuarios};
+  uCadastroUsuarios in 'uCadastroUsuarios.pas' {FrmCadastroUsuarios},
+  uSobre in 'uSobre.pas' {FrmSobre};
 
 {$R *.res}
  var

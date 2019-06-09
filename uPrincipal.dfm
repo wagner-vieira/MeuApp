@@ -4200,6 +4200,10 @@ object FrmPrincipal: TFrmPrincipal
         OnClick = Calculadora1Click
       end
     end
+    object Sibre1: TMenuItem
+      Caption = 'Sobre'
+      OnClick = Sibre1Click
+    end
     object Sair1: TMenuItem
       Caption = 'Sair'
       OnClick = Sair1Click
