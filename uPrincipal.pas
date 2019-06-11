@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Winapi.ShellAPI, Vcl.ComCtrls,
-  Vcl.ExtCtrls, dxGDIPlusClasses, Vcl.StdCtrls, Vcl.ToolWin, Vcl.Buttons, System.UITypes;
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.ToolWin, Vcl.Buttons, System.UITypes;
 
 type
   TFrmPrincipal = class(TForm)
@@ -37,6 +37,7 @@ type
     N4: TMenuItem;
     N5: TMenuItem;
     Sibre1: TMenuItem;
+    Ajuda1: TMenuItem;
     procedure Calculadora1Click(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure Calendrio1Click(Sender: TObject);
@@ -50,6 +51,7 @@ type
     procedure Usurios1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure Sibre1Click(Sender: TObject);
+    procedure Ajuda1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,7 +64,8 @@ var
 implementation
 
 uses
-  uCalendario, uTabuadas, uTriangulo, uCadastroClientes, uCadastroProdutos, uPedidos, uCadastroUsuarios, uSobre;
+  uCalendario, uTabuadas, uTriangulo, uCadastroClientes, uCadastroProdutos, uPedidos, uCadastroUsuarios, uSobre,
+  uAjuda;
 
 {$R *.dfm}
 
@@ -74,6 +77,15 @@ begin
   end;
   FrmTabuadas.Show;
 
+end;
+
+procedure TFrmPrincipal.Ajuda1Click(Sender: TObject);
+begin
+  if FrmAjuda = nil then
+  begin
+    Application.CreateForm(TFrmAjuda,FrmAjuda);
+  end;
+  FrmAjuda.Show;
 end;
 
 procedure TFrmPrincipal.BitBtn1Click(Sender: TObject);
